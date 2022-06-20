@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prototype link on Figma
+
+https://www.figma.com/proto/D70zojNze3FoVXqFeWfGRj/Untitled?node-id=7%3A8&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A8
+
 ## Available Scripts
 
 In the project directory, you can run:
