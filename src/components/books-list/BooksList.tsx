@@ -2,16 +2,16 @@ import React from 'react';
 import style from './BooksList.module.scss';
 import Item from './item/Item';
 
-function BooksList({ books }: { books: any[] }) {
+function BooksList({ books }: { books: any }) {
+    console.log(books)
     return (
-        <aside>
+        <aside className={style.BooksList}>
             <h2>Resultados:</h2>
-
-            <ul>
-                {books?.map((item, index) => (
+            <ul className={style.List}>
+                {books?.items?.map((book: []) =>  (
                     <Item
-                        key={index}
-                        {...item}
+                        key={books.id}
+                        item={book}
                     />
                 ))}
             </ul>

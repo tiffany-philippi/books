@@ -4,7 +4,7 @@ import SearchBook from '../search/SearchBook';
 
 function Books() {
     const [search, setSearch] = useState('');
-    const [books, setBooks] = useState({});
+    const [books, setBooks] = useState([]);
     const url = 'https://www.googleapis.com/books/v1'
     const apiKey = 'AIzaSyAdeMzagSkk7OCpqzvqFgh4Rd_r2BvXClk'
     
@@ -13,7 +13,7 @@ function Books() {
             fetch(`${url}/volumes?q=${search}&key=${apiKey}`)
                 .then((res) => res.json())
                     .then((res) => {
-                        console.log(res)
+                        setBooks(res)
                     })
         }
     }, [search]);
@@ -21,7 +21,7 @@ function Books() {
     return (
         <div>
             <SearchBook value={search} onChange={(search) => setSearch(search)}/>
-            {/* <BooksList books={books}/> */}
+            <BooksList books={books}/>
         </div>
     )
     

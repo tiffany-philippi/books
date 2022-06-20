@@ -1,0 +1,33 @@
+.BooksList {
+    padding: 0 40px;
+    .List {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-inline-start: 0;
+    }
+}
+
+.Item {
+    list-style: none;
+    
+    .ItemCard {
+        border-radius: 10px;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+        width: 230px;
+        height: 450px;
+        padding: 18px 18px 0 18px;
+        margin: 20px 0;
+        .ItemCardImage {
+            width: 100%;
+        }
+        .ItemCardTitle {
+            font-size: 16px;
+            color: #2D2C2C;
+        } 
+        .ItemCardAuthors {
+            font-size: 14px;
+            color: #767676;
+        }
+    }
+}
