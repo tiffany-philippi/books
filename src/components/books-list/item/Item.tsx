@@ -1,11 +1,12 @@
+import React from 'react';
 import style from '../BooksList.module.scss';
 import image from '../../../assets/images/no-book-cover.png';
 
-function Item({ item }) {
+function Item({ item }: any) {
     const book = item.volumeInfo;
 
-    function formatAuthors(authors) {
-        let authorsList = [];
+    function formatAuthors(authors: []) {
+        let authorsList: [] = [];
         authors?.map(author => authorsList.push(author))
         return authorsList.length > 0 ? authorsList.toString().replace(',', ', ') : 'Desconhecido';
     }
@@ -18,7 +19,7 @@ function Item({ item }) {
                     <h2 className={style.ItemCardTitle}>{book.title}</h2>
                     <div className={style.ItemCardInfo}>
                         <p className={style.ItemCardAuthors}>{formatAuthors(book.authors)} </p>
-                        <span className={style.ItemCardYear}> | {book.publishedDate.substring(0, 4)}</span>
+                        <span className={style.ItemCardYear}> | {book.publishedDate?.substring(0, 4)}</span>
                     </div>
                 </div>
                 <div className={style.ItemCardButtonContainer}>

@@ -8,9 +8,9 @@ function BooksList({ books }: { books: any }) {
         <aside className={style.BooksList}>
             <h2>Resultados:</h2>
             <ul className={style.List}>
-                {books?.items?.map((book: []) =>  (
+                {books?.items?.map((book: any) =>  (
                     <Item
-                        key={books.id}
+                        key={book.id}
                         item={book}
                     />
                 ))}
